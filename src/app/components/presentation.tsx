@@ -10,8 +10,8 @@ const Presentation = () => {
                 <div className='w-full flex flex-col items-center'>
                     <AppBar></AppBar>
                     <div className='md:flex justify-between'>
-                        <div className='max w-full md:w-1/2 p-6 space-y-5 md:space-y-10'>
-                            <div className="max space-y-3">
+                        <div className='w-full md:w-1/2 p-6 space-y-5 md:space-y-10'>
+                            <div className="space-y-3">
                                 <motion.p className='uppercase tracking-wider text-green-700'>Bienvenu chez CEMENA-TOGO</motion.p>
                                 <motion.h1
                                     variants={Animations.bottomToTop({ duration: 0.5 })}
@@ -25,7 +25,7 @@ const Presentation = () => {
                                     variants={Animations.bottomToTop({ duration: 2.2 })}
                                     initial="hidden"
                                     whileInView="show"
-                                    className="w-[400px]">
+                                >
                                     Prenez soin de votre bien-être grâce à nos solutions naturelles, alliant tradition et innovation pour une santé durable.
                                 </motion.p>
                                 <motion.a href='#contact'

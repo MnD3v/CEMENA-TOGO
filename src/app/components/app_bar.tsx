@@ -65,11 +65,11 @@ const AppBar = () => {
                         </a>
 
                         <ul className="max flex uppercase">
-                            <li className="hover:text-orange-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
-                            <li className="hover:text-orange-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#formations"}>Services</a></li>
+                            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
+                            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#formations"}>Services</a></li>
 
-                            <li className="hover:text-orange-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#a-propos"}>A Propos</a></li>
-                            <li className="hover:text-orange-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#contact"}>Contact</a></li>
+                            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#a-propos"}>A Propos</a></li>
+                            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#contact"}>Contact</a></li>
                         </ul>
                     </div>
                     <div className='flex w-full justify-between md:hidden items-center'>
@@ -98,13 +98,15 @@ const MobileAppBar = ({ menuRef, menuIsOpen, inNotHome }: { menuRef: React.RefOb
         initial={{ x: "-300px" }}
         animate={{ x: menuIsOpen ? "0" : "-300px", transition: { duration: 0.25 } }}
         className='fixed flex flex-col justify-between bg-white w-[300px] h-full p-6 text-black z-50'>
-
+        <img src="/utils/deco-1.png" alt="" className='-top-16 -left-8 absolute h-64 rotate-[135deg]
+        opacity-40 pointer-events-none
+        ' />
         <ul className={`flex flex-col items-center justify-center  uppercase`}>
-            <li className="hover:text-orange-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
-            <li className="hover:text-orange-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#formations"}>SERVICES</a></li>
+            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
+            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#formations"}>SERVICES</a></li>
 
-            <li className="hover:text-orange-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#a-propos"}>A Propos</a></li>
-            <li className="hover:text-orange-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#contact"}>Contact</a></li>
+            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#a-propos"}>A Propos</a></li>
+            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#contact"}>Contact</a></li>
         </ul>
         <div className="flex flex-wrap gap-4">
 
