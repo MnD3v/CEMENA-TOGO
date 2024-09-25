@@ -30,7 +30,7 @@ const PourquoiNous = () => {
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6 font-marcellus text-lg'>
                         {
                             raisons.map((element) => (
-                                <div className='space-y-3'>
+                                <div key={element.title} className='space-y-3'>
                                     <h2 className='text-xl md:text-2xl'>{element.title}</h2>
                                     <p>{element.description}</p>
                                     <div className='h-px w-full bg-zinc-500 my-4'></div>
