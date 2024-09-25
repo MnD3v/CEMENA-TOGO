@@ -126,6 +126,7 @@ const Services = () => {
                 <div className='  flex flex-wrap justify-center gap-2'>
                     {maladies.map((element) => (
                         <motion.div
+                            key={element}
                             variants={Animations.scale({ duration: 0.1 * maladies.indexOf(element), })}
                             initial="hidden"
                             whileInView="show"

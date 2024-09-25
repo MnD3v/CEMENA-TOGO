@@ -1,14 +1,8 @@
-import { motion } from 'framer-motion'
 import React from 'react'
-import Animations from './utils/item'
 
 const Produits = () => {
 
-    const chiffres = [
-        { titre: "750", subtitre: "Jeunes", description: " ont bénéficié de programmes de formation et d'accompagnement professionnel" },
-        { titre: "6", subtitre: "ans", description: " d'impact et de croissance continue dans l'accompagnement des jeunes" },
-        { titre: "98", subtitre: "%", description: "de satisfaction de nos clients devient 98% de nos clients se déclarent pleinement satisfaits des services et des résultats obtenus" },
-    ]
+
     return (
         <div className='flex  justify-center py-10 my-10 '>
             <div className='m-2'>
@@ -22,7 +16,7 @@ const Produits = () => {
                                 <div className='relative -top-9 flex flex-col items-center text-center'>
                                     <img src="/produits/produit-1.png" alt="" className='h-32 ' />
                                     <p className='text-xl  font-bricolage font-semibold text-green-600'>Sinus</p>
-                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita,</p>
+                                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, {element}</p>
                                 </div>
 
                             </a>

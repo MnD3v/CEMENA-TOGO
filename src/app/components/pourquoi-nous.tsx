@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion'
 import React from 'react'
-import Animations from './utils/item'
 
 const PourquoiNous = () => {
 
@@ -25,15 +23,15 @@ const PourquoiNous = () => {
 
             <div className='max bg-[url("/utils/why_us.png")] bg-cover text-white'>
                 <div className='flex flex-col bg-black/50 px-6 md:px-16 pt-14'>
-                    <p>POURQUOI NOUS CHOISIR</p>
+                    <p className='text-green-300 text-lg'>POURQUOI NOUS CHOISIR</p>
                     <div className='h-9'></div>
-                    <p className='font-marcellus text-4xl'>Evitez et soignez les maladies de manière naturelle</p>
+                    <p className='font-marcellus text-2xl md:text-4xl'>Evitez et soignez les maladies de manière naturelle</p>
                     <div className='h-14'></div>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6 font-marcellus text-lg'>
                         {
                             raisons.map((element) => (
                                 <div className='space-y-3'>
-                                    <h2>{element.title}</h2>
+                                    <h2 className='text-xl md:text-2xl'>{element.title}</h2>
                                     <p>{element.description}</p>
                                     <div className='h-px w-full bg-zinc-500 my-4'></div>
                                 </div>
