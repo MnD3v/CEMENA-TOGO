@@ -5,8 +5,8 @@ const APropos = () => {
         <section id="a-propos" className='flex  justify-center p-3'>
             <div className='max flex flex-col items-center'>
                 <p className='font-medium text-green-600'>A PROPOS DE CEMENA-TOGO</p>
-                <div className='my-4 space-y-3 text-center'>
-                    <p className='font-marcellus text-3xl '>
+                <div className='my-4 space-y-3 '>
+                    <p className='font-marcellus text-3xl text-center'>
                         Bienvenue chez CEMENA-TOGO, votre Centre d'Etude en Médecine Naturelle dédié à votre bien-être.
 
                     </p>

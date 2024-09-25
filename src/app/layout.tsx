@@ -53,11 +53,11 @@ export default function RootLayout({
           <div className="relative z-10 max flex flex-wrap justify-center gap-9">
 
             <div>
-              <img src="/logo.png" alt="" className="w-48" />
+              <img src="/logo.png" alt="" className="w-24 md:w-48" />
               <p className="w-80 mt-6">Chez CEMENA-TOGO, des solutions naturelles sur mesure pour améliorer votre bien-être et renforcer votre santé, en combinant tradition et innovation.</p>
               <div className="my-6 flex gap-2">
                 {socials.map((element) => (
-                  <div key={element.icon} className="bg-white h-14 w-14 rounded-lg flex flex-col items-center justify-center">
+                  <div key={element.icon} className="bg-green-200 h-14 w-14 rounded-full flex flex-col items-center justify-center">
                     <img src={`/icons/${element.icon}`} alt="" className="h-6" />
                   </div>
                 ))}

@@ -14,7 +14,7 @@ const Presentation = () => {
                             <div className="max space-y-3">
                                 <motion.p className='uppercase tracking-wider text-green-700'>Bienvenu chez CEMENA-TOGO</motion.p>
                                 <motion.h1
-                                    variants={Animations.bottomToTop({ duration: 0.7 })}
+                                    variants={Animations.bottomToTop({ duration: 0.5 })}
                                     initial="hidden"
                                     whileInView="show"
                                     className="text-3xl md:text-5xl font-extralight font-marcellus">Des solutions naturel pour votre Santé</motion.h1>
@@ -29,14 +29,14 @@ const Presentation = () => {
                                     Prenez soin de votre bien-être grâce à nos solutions naturelles, alliant tradition et innovation pour une santé durable.
                                 </motion.p>
                                 <motion.a href='#contact'
-                                    variants={Animations.scale({ duration: 2.5 })}
+                                    variants={Animations.scale({ duration: 2.0 })}
                                     initial="hidden"
                                     whileInView="show"
                                     className="font-poppins text-white 
                                  px-10 py-3
                                 my-3 
 
-                               bg-green-700 border-2  rounded-full
+                               bg-green-700 border-2 rounded-full
                                 self-start
                                 ">Contactez-nous</motion.a>
 
@@ -60,27 +60,27 @@ const Presentation = () => {
                             <div className='flex justify-center'>
                                 <div className='m-2 space-y-4'>
                                     <motion.img src={"/presentation/m-1.png"} alt=""
-                                        variants={Animations.bottomToTop({ duration: 0.7, inverse: true })}
+                                        variants={Animations.bottomToTop({ duration: 0.5, inverse: true })}
                                         initial="hidden"
                                         whileInView="show"
-                                        className='rounded-xl rounded-bl-[80px] rounded-tr-[80px] w-44 h-44 object-cover' />
+                                        className='rounded-xl rounded-bl-[80px] rounded-tr-[80px] w-44 max-w-[40vw] h-44 object-cover' />
                                     <motion.img src={"/presentation/m-2.png"} alt=""
-                                        variants={Animations.bottomToTop({ duration: 0.7, })}
+                                        variants={Animations.bottomToTop({ duration: 0.5, })}
                                         initial="hidden"
                                         whileInView="show"
-                                        className='rounded-xl rounded-tl-[80px] rounded-br-[80px] w-44 h-60 object-cover' />
+                                        className='rounded-xl rounded-tl-[80px] rounded-br-[80px] w-44 max-w-[40vw] h-60 object-cover' />
                                 </div>
                                 <div className='m-2 space-y-4'>
                                     <motion.img src={"/presentation/m-3.png"} alt=""
-                                        variants={Animations.leftToRight({ duration: 0.7, inverse: true })}
+                                        variants={Animations.leftToRight({ duration: 0.5, inverse: true })}
                                         initial="hidden"
                                         whileInView="show"
-                                        className='rounded-xl rounded-tl-[80px] rounded-br-[80px] w-44 h-60 object-cover' />
+                                        className='rounded-xl rounded-tl-[80px] rounded-br-[80px] w-44 max-w-[40vw] h-60 object-cover' />
                                     <motion.img
-                                        variants={Animations.scale({ duration: 0.7, })}
+                                        variants={Animations.scale({ duration: 0.5, })}
                                         initial="hidden"
                                         whileInView="show"
-                                        src={"/presentation/m-4.png"} alt="" className='rounded-xl rounded-bl-[80px] rounded-tr-[80px] w-44 h-44 object-cover' />
+                                        src={"/presentation/m-4.png"} alt="" className='rounded-xl rounded-bl-[80px] rounded-tr-[80px] w-44 max-w-[40vw] h-44 object-cover' />
                                 </div>
                             </div>
                         </div>

@@ -108,14 +108,14 @@ const MobileAppBar = ({ menuRef, menuIsOpen, inNotHome }: { menuRef: React.RefOb
         </ul>
         <div className="flex flex-wrap gap-4">
 
-            <img src="/black-logo.png" alt="" className="h-9" />
+            <img src="/logo.png" alt="" className="h-14" />
 
             <div className=" font-bricolage gap-6 items-center space-y-3">
                 <div className='flex'>
                     <img src="/icons/clock.png" alt="" className='h-4 m-1' />
                     <div>
-                        <p className="font-semibold">Lundi - Vendredi 08:00 - 19:00</p>
-                        <p>Samedis et Dimanches - FERMÉ</p>
+                        <p className="font-semibold">Lundi - Samedi 08:00 - 19:00</p>
+                        <p>Dimanches - FERMÉ</p>
                     </div>
                 </div>
 
@@ -123,8 +123,8 @@ const MobileAppBar = ({ menuRef, menuIsOpen, inNotHome }: { menuRef: React.RefOb
                     <img src="/icons/phone.png" alt="" className='h-4 m-1' />
 
                     <div>
-                        <p className="font-semibold">+228 90 90 90 90</p>
-                        <p>ths@group.com</p>
+                        <p className="font-semibold">+228 93 45 21 72</p>
+
                     </div>
                 </div>
 

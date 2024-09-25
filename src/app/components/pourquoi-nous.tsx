@@ -19,7 +19,7 @@ const PourquoiNous = () => {
 
     ]
     return (
-        <div className="py-6 md:py-12 flex justify-center m-6">
+        <div className="py-6 md:py-12 flex justify-center m-1 md:m-6">
 
             <div className='max bg-[url("/utils/why_us.png")] bg-cover text-white'>
                 <div className='flex flex-col bg-black/50 px-6 md:px-16 pt-14'>
@@ -31,8 +31,8 @@ const PourquoiNous = () => {
                         {
                             raisons.map((element) => (
                                 <div key={element.title} className='space-y-3'>
-                                    <h2 className='text-xl md:text-2xl'>{element.title}</h2>
-                                    <p>{element.description}</p>
+                                    <h2 className='text-lg md:text-2xl'>{element.title}</h2>
+                                    <p className='text-sm md:text-base'>{element.description}</p>
                                     <div className='h-px w-full bg-zinc-500 my-4'></div>
                                 </div>
                             ))

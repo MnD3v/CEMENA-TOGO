@@ -93,7 +93,7 @@ const Services = () => {
                     <p className=' uppercase text-lg text-green-600 font-medium'>Nos SERVICES</p></div>
                 <p className='font-marcellus text-2xl'>Nous intervenons dans ces differents cas</p>
             </div>
-            <div className=' max grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-2'>
+            <div className=' max grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 md:gap-2'>
                 {
                     services.map((element) => (
                         <motion.a
@@ -101,11 +101,11 @@ const Services = () => {
                             initial="hidden"
                             whileInView="show"
                             viewport={{ once: true }}
-                            key={element.numero} className='p-2'> <div
+                            key={element.numero} className='p-1'> <div
 
                                 className=' h-full
                                 border hover:border-green-600 rounded-md
-                                space-y-4 p-6 
+                                space-y-4 p-2 md:p-6 
                                 transition-all duration-200'>
 
                                 <h3 className='font-semibold font-bricolage text-green-600'>{element.numero}.</h3>
@@ -123,7 +123,7 @@ const Services = () => {
                 <p className='text-center text-2xl font-marcellus  
                 my-4'>Nous traitons totalement les maladies suivantes</p>
                 <div className='h-px w-28 bg-zinc-300 mb-4'></div>
-                <div className='  flex flex-wrap justify-center gap-2'>
+                <div className='  flex flex-wrap gap-1 p-1'>
                     {maladies.map((element) => (
                         <motion.div
                             key={element}
@@ -132,7 +132,7 @@ const Services = () => {
                             whileInView="show"
                             className='
                       flex
-                        px-6 py-3 space-x-2
+                        px-4 py-2 space-x-2
                         bg-red-100 border border-red-600 rounded-xl'>
                             <img src="/icons/maladie.png" alt="" className='h-6' />
                             <p>{element}</p>
