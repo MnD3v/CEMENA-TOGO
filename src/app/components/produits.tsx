@@ -88,17 +88,26 @@ const Produits = () => {
 
         const handleClickOutside = (event: MouseEvent) => {
             if (popupRef.current && !popupRef.current.contains(event.target as Node)) {
-                console.log("outside")
+                document.body.style.overflow = 'auto';
+
                 setPopupVisible(false)
             }
         }
+        const handlePopState = () => {
+            if (isPopupVisible) {
+                document.body.style.overflow = 'auto';
 
+                setPopupVisible(false)
+            }
+        };
+        window.addEventListener('popstate', handlePopState);
         document.addEventListener('mousedown', handleClickOutside);
 
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
 
             window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('popstate', handlePopState);
         };
     }, []);
     useEffect(() => {
@@ -116,12 +125,21 @@ const Produits = () => {
                     initial="hidden"
                     whileInView="show"
                     exit="hidden"
-                    className='flex flex-col w-[550px] max-w-[90vw] max-h-[80vh] bg-white rounded-xl overflow-y-auto'>
+                    className='flex flex-col w-[550px] max-w-[90vw] max-h-[80vh] bg-white rounded-xl overflow-y-auto scroll-smooth'>
                     <div className='flex justify-between p-2'>
                         <div className='bg-green-500 border border-white ring ring-green-500 px-4 py-2 rounded-lg text-white self-start'>
                             CEMENA-TOGO
                         </div>
-                        <button onClick={() => setPopupVisible(!isPopupVisible)} className='p-4 rounded-full bg-red-500'>
+                        <button onClick={() => {
+
+
+
+                            document.body.style.overflow = 'auto';
+
+
+                            setPopupVisible(!isPopupVisible)
+
+                        }} className='p-4 rounded-full bg-red-500'>
                             <img src="/icons/close.png" alt="" className='h-4' />
                         </button>
                     </div>
