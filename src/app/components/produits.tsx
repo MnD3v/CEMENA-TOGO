@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import Animations from './utils/item'
-
+import Popup from 'reactjs-popup';
 const Produits = () => {
     const [isPopupVisible, setPopupVisible] = useState(false)
     const produits = [
@@ -50,75 +50,11 @@ const Produits = () => {
         }
     ]
 
-    const [currentProduit, setCurrentProduit] = useState<{
-        image: string;
-        name: string;
-        description: string;
-        full_description: string;
-    } | null>(null)
+
 
     return (
         <div className='relative flex  justify-center items-center py-10 my-10'>
-            <button
-                onClick={() => {
-                    document.body.style.overflow = 'auto';
-                    setPopupVisible(!isPopupVisible)
-                }}
-                className={` fixed top-0 ${isPopupVisible ? "flex" : "hidden"} justify-center items-center h-full w-full bg-black/40 backdrop-blur-sm z-50`}>
-                <motion.div
-                    variants={Animations.opacity({ duration: 0.2 })}
-                    initial="hidden"
-                    whileInView="show"
-                    exit="hidden"
-                    className='flex flex-col w-[550px] max-w-[90vw] max-h-[80vh] bg-white rounded-xl overflow-y-auto'>
-                    <div className='flex justify-between p-2'>
-                        <div className='bg-green-500 border border-white ring ring-green-500 px-4 py-2 rounded-lg text-white self-start'>
-                            CEMENA-TOGO
-                        </div>
-                        <button onClick={() => setPopupVisible(!isPopupVisible)} className='p-4 rounded-full bg-red-500'>
-                            <img src="/icons/close.png" alt="" className='h-4' />
-                        </button>
-                    </div>
-                    <div className='relative w-full flex flex-col '>
-                        {currentProduit && (
-                            <>
-                                <img src={`/produits/${currentProduit.image}`} alt="" className='h-40 self-center' />
-                                <div className='p-2 mb-10'>
-                                    <h2 className='text-green-700'>{currentProduit.name}</h2>
-                                    <p className='text-start'>
-                                        {currentProduit.full_description.split("*").map((element3, index) => (
-                                            <span
-                                                key={index}
-                                                className={index % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}
-                                            >
-                                                {element3}
-                                            </span>
-                                        ))}
-                                    </p>
-                                </div>
 
-                                <div className=' absolute bottom-0 w-full grid grid-cols-2 justify-center space-x-1 p-2 bg-white'>
-                                    <a href="tel:+22893452172" target='_blank' className='flex justify-center items-center bg-green-600 border-2 border-green-500 
-                                    px-10 py-2
-                                 
-                                    rounded-md h-auto'>
-                                        <p className='text-white'>Appeler</p>
-                                    </a>
-                                    <a href='https://wa.me/22893452172' target='_blank' className=' bg-white border-2 border-green-500 rounded-md p-2'>
-                                        <div className='flex justify-center items-center space-x-2 text-green-600'>
-                                            <img src="/icons/whatsapp.png" alt="" className='h-9' />
-                                            Whatsapp
-                                        </div>
-
-
-                                    </a>
-                                </div>
-                            </>
-                        )}
-                    </div>
-                </motion.div>
-
-            </button>
             <div className='m-2'>
                 <div className='flex items-center justify-center mb-5'>
                     <img src="/utils/feuille.png" alt="" className='h-10' />
@@ -126,33 +62,93 @@ const Produits = () => {
                 <div className='max grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1'>
                     {
                         produits.map((element) => (
-                            <button onClick={() => {
-                                document.body.style.overflow = 'hidden';
+                            <Popup
+                                trigger={<button onClick={() => {
 
-                                setPopupVisible(!isPopupVisible)
-                                setCurrentProduit(element)
-                            }} key={element.name} className='relative group
+                                }} key={element.name} className='relative group
                            flex flex-col items-center justify-center
                             my-6
                              bg-white hover:bg-green-50 border-2 border-green-300 rounded-2xl '>
-                                <motion.img src="/produits/produit-1.png" alt=""
-                                    variants={Animations.scale({ duration: 0.3 * produits.indexOf(element), })}
+                                    <motion.img src="/produits/produit-1.png" alt=""
+                                        variants={Animations.scale({ duration: 0.3 * produits.indexOf(element), })}
+                                        initial="hidden"
+                                        whileInView="show"
+                                        className='absolute  -top-8  h-24 group-hover:scale-125' />
+                                    <div className='w-full  flex flex-col items-center p-2 mt-16 text-center'>
+
+                                        <p className='text-xl text-green-800  font-bricolage font-semibold '>{element.name}</p>
+                                        <p>{element.description.split("*").map((element2) => (<span key={element2} className={`${element.description.split("*").indexOf(element2) % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}`}>{element2} </span>))}</p>
+                                        <a className='text-white hover:text-white w-full py-3 bg-green-400 hover:bg-green-900 border border-white hover:ring ring-green-900 rounded-xl'>Voir</a>
+                                    </div>
+
+                                </button>}
+                                position="right center"
+                                modal
+                                nested
+
+                            >
+
+                                <motion.div
+                                    variants={Animations.opacity({ duration: 0.2 })}
                                     initial="hidden"
                                     whileInView="show"
-                                    className='absolute  -top-8  h-24 group-hover:scale-125' />
-                                <div className='w-full  flex flex-col items-center p-2 mt-16 text-center'>
+                                    exit="hidden"
+                                    className='flex flex-col w-[550px] max-w-[90vw] max-h-[80vh] bg-white rounded-xl overflow-y-auto'>
+                                    <div className='flex justify-between p-2'>
+                                        <div className='bg-green-500 border border-white ring ring-green-500 px-4 py-2 rounded-lg text-white self-start'>
+                                            CEMENA-TOGO
+                                        </div>
 
-                                    <p className='text-xl text-green-800  font-bricolage font-semibold '>{element.name}</p>
-                                    <p>{element.description.split("*").map((element2) => (<span key={element2} className={`${element.description.split("*").indexOf(element2) % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}`}>{element2} </span>))}</p>
-                                    <a className='text-white hover:text-white w-full py-3 bg-green-400 hover:bg-green-900 border border-white hover:ring ring-green-900 rounded-xl'>Voir</a>
-                                </div>
+                                    </div>
+                                    <div className='w-full flex flex-col '>
+                                        {element && (
+                                            <>
+                                                <img src={`/produits/${element.image}`} alt="" className='h-40 self-center' />
+                                                <div className='p-2'>
+                                                    <h2 className='text-green-700 font-semibold font-bricolage'>{element.name}</h2>
+                                                    <p className='text-start'>
+                                                        {element.full_description.split("*").map((element3, index) => (
+                                                            <span
+                                                                key={index}
+                                                                className={index % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}
+                                                            >
+                                                                {element3}
+                                                            </span>
+                                                        ))}
+                                                    </p>
+                                                </div>
 
-                            </button>
+                                                <div className=' w-full grid grid-cols-2 justify-center space-x-1 p-2 bg-white'>
+                                                    <a href="tel:+22893452172" target='_blank' className='flex justify-center items-center bg-green-600 border-2 border-green-500 
+                                    px-10 py-2
+                                 
+                                    rounded-md h-auto'>
+                                                        <p className='text-white'>Appeler</p>
+                                                    </a>
+                                                    <a href='https://wa.me/22893452172' target='_blank' className=' bg-white border-2 border-green-500 rounded-md p-2'>
+                                                        <div className='flex justify-center items-center space-x-2 text-green-600'>
+                                                            <img src="/icons/whatsapp.png" alt="" className='h-9' />
+                                                            Whatsapp
+                                                        </div>
+
+
+                                                    </a>
+                                                </div>
+                                            </>
+                                        )}
+                                    </div>
+                                </motion.div>
+
+
+
+                            </Popup>
+
                         ))
                     }
                 </div>
 
             </div>
+
 
         </div>
     )
