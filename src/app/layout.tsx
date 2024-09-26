@@ -52,13 +52,7 @@ export default function RootLayout({
             <div>
               <img src="/logo.png" alt="" className="w-24 md:w-48" />
               <p className="w-80 mt-6">Chez CEMENA-TOGO, des solutions naturelles sur mesure pour améliorer votre bien-être et renforcer votre santé, en combinant tradition et innovation.</p>
-              <div className="my-6 flex gap-2">
-                {socials.map((element) => (
-                  <div key={element.icon} className="bg-green-200 h-14 w-14 rounded-full flex flex-col items-center justify-center">
-                    <img src={`/icons/${element.icon}`} alt="" className="h-6" />
-                  </div>
-                ))}
-              </div>
+
             </div>
             <div className="pt-6 w-80 font-poppins">
               <h3>
@@ -72,6 +66,13 @@ export default function RootLayout({
               <div className="flex items-center">
                 <img src="/icons/map.png" alt="" className="h-6 mx-1 " />
                 <p className="p-3">Notre Siège social est dans le quartier SOS, derrière l'église AD Sinaï,sur la route de Ketao,avant le pont.</p>
+              </div>
+              <div className="my-6 flex gap-2">
+                {socials.map((element) => (
+                  <div key={element.icon} className="bg-green-200 h-14 w-14 rounded-full flex flex-col items-center justify-center">
+                    <img src={`/icons/${element.icon}`} alt="" className="h-6" />
+                  </div>
+                ))}
               </div>
             </div>
 
