@@ -1,6 +1,5 @@
 "use client"
 import { motion } from 'framer-motion'
-import React, { useState } from 'react'
 import Animations from './utils/item'
 import Popup from 'reactjs-popup';
 const Produits = () => {
