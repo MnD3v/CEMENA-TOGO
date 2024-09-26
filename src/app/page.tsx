@@ -33,6 +33,7 @@ export default function Home() {
         whileInView="show"
         className="">
 
+
         <FixedAppBar></FixedAppBar>
         <Presentation></Presentation>
         <APropos></APropos>

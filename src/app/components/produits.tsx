@@ -1,42 +1,113 @@
+"use client"
 import { motion } from 'framer-motion'
-import React from 'react'
+import React, { useState } from 'react'
 import Animations from './utils/item'
 
 const Produits = () => {
+    const [isPopupVisible, setPopupVisible] = useState(false)
     const produits = [
         {
-            name: "Sinus",
-            description: "Remede contre les *sinusites*",
-            full_description: ""
-        }, {
-            name: "Hepatus",
-            description: "Remede contre l'*hepatite B*",
-            full_description: ""
-        }, {
-            name: "Menopus",
-            description: "Previent la *menopose precoce*",
-            full_description: ""
-        }, {
-            name: "Hernus",
-            description: "Lutte contre le developpement de *l'herni*",
-            full_description: ""
-        }, {
-            name: "Athmus",
-            description: "Remede efficace contre *l'asthme*",
-            full_description: ""
-        }, {
-            name: "Ulcerus",
-            description: "Traite complètement les *ulcères*",
-            full_description: ""
-        }, {
-            name: "Palus",
-            description: "Previent et Guerit le *paludisme*",
-            full_description: ""
+            "image": "produit-1.png",
+            "name": "Sinus",
+            "description": "Remede contre les *sinusites*",
+            "full_description": "Le remède Sinus est conçu pour soulager et guérir les *sinusites* en moins de deux semaines. Grâce à sa formule 100% naturelle, il réduit l'inflammation des sinus, améliore la respiration et élimine les douleurs associées. Ce produit est particulièrement efficace contre les sinusites chroniques et récurrentes, offrant un soulagement rapide dès les premières prises."
         },
+        {
+            "image": "produit-1.png",
+            "name": "Hepatus",
+            "description": "Remede contre l'*hepatite B*",
+            "full_description": "Hepatus est un remède puissant qui combat l'*hépatite B* en renforçant les fonctions hépatiques et en éliminant les toxines du foie. Après 30 jours d'utilisation régulière, les symptômes de l'hépatite sont considérablement réduits, avec une amélioration visible des marqueurs de santé hépatique. Son efficacité est prouvée dans la régénération des cellules hépatiques endommagées."
+        },
+        {
+            "image": "produit-1.png",
+            "name": "Menopus",
+            "description": "Previent la *menopose precoce*",
+            "full_description": "Menopus est un traitement naturel conçu pour prévenir la *ménopause précoce*. En stimulant la production hormonale et en régulant le cycle menstruel, Menopus aide à retarder les symptômes liés à la ménopause. Une utilisation régulière de trois mois permet de stabiliser les fonctions hormonales et d'améliorer le bien-être général."
+        },
+        {
+            "image": "produit-1.png",
+            "name": "Hernus",
+            "description": "Lutte contre le developpement de *l'herni*",
+            "full_description": "Hernus est un traitement efficace pour freiner le développement de *l'hernie*. Il agit en renforçant les tissus et en réduisant l'inflammation au niveau de la hernie. Ce produit permet un soulagement notable des douleurs après une semaine d'utilisation, avec des résultats optimaux au bout de 30 jours."
+        },
+        {
+            "image": "produit-1.png",
+            "name": "Athmus",
+            "description": "Remede efficace contre *l'asthme*",
+            "full_description": "Athmus est un remède naturel qui aide à gérer et à prévenir les crises d'*asthme*. Il agit en améliorant les fonctions respiratoires et en réduisant les inflammations des voies respiratoires. Après 15 jours d'utilisation, les patients ressentent une nette amélioration de leur respiration, et la fréquence des crises d'asthme est considérablement réduite."
+        },
+        {
+            "image": "produit-1.png",
+            "name": "Ulcerus",
+            "description": "Traite complètement les *ulcères*",
+            "full_description": "Ulcerus est un remède naturel qui soigne les *ulcères* gastriques et duodénaux. Sa formule apaisante permet de réduire rapidement les douleurs et de cicatriser les plaies internes. Les premiers signes de guérison apparaissent après une semaine, et un traitement complet de 30 jours est recommandé pour une rémission totale."
+        },
+        {
+            "image": "produit-1.png",
+            "name": "Palus",
+            "description": "Previent et Guerit le *paludisme*",
+            "full_description": "Palus est un remède qui prévient et traite efficacement le *paludisme*. Sa combinaison unique d'ingrédients actifs renforce le système immunitaire et élimine le parasite responsable du paludisme. Après une cure de 7 jours, les symptômes disparaissent et les rechutes sont considérablement réduites. Ce produit est également recommandé en prophylaxie pour les zones à risque."
+        }
     ]
 
+    const [currentProduit, setCurrentProduit] = useState<{
+        image: string;
+        name: string;
+        description: string;
+        full_description: string;
+    } | null>(null)
+
     return (
-        <div className='flex  justify-center py-10 my-10 '>
+        <div className='relative flex  justify-center items-center py-10 my-10'>
+            <button
+                onClick={() => {
+                    setPopupVisible(!isPopupVisible)
+                }}
+                className={` fixed top-0 ${isPopupVisible ? "flex" : "hidden"} justify-center items-center inset-0 bg-black/40 backdrop-blur-sm z-50`}>
+                <motion.div
+                    variants={Animations.opacity({ duration: 0.2 })}
+                    initial="hidden"
+                    whileInView="show"
+                    exit="hidden"
+                    className='flex flex-col w-[350px] max-w-[90vw] bg-white rounded-xl p-4'>
+                    <div className='flex justify-between'>
+                        <div className='bg-green-500 border border-white ring ring-green-500 px-4 py-2 rounded-lg text-white self-start'>
+                            CEMENA-TOGO
+                        </div>
+                        <button onClick={() => setPopupVisible(!isPopupVisible)} className='h-8 w-8 rounded-full bg-red-300'></button>
+                    </div>
+                    <div className='w-full flex flex-col '>
+                        {currentProduit && (
+                            <>
+                                <img src={`/produits/${currentProduit.image}`} alt="" className='h-48 self-center' />
+                                <h2 className='text-green-700'>{currentProduit.name}</h2>
+                                <p className='text-start'>
+                                    {currentProduit.full_description.split("*").map((element3, index) => (
+                                        <span
+                                            key={index}
+                                            className={index % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}
+                                        >
+                                            {element3}
+                                        </span>
+                                    ))}
+                                </p>
+                                <div className='flex justify-center my-4 space-x-1'>
+                                    <a href="tel:+22893452172" target='_blank' className='flex justify-center items-center bg-green-600 border-2 border-green-500 
+                                    px-10 py-2
+                                    rounded-md h-auto'>
+                                        <p className='text-white'>Appeler</p>
+                                    </a>
+                                    <a href='https://wa.me/22893452172' target='_blank' className='bg-green-200 rounded-md p-2'>
+                                        <img src="/icons/whatsapp.png" alt="" className='h-9' />
+
+                                    </a>
+                                </div>
+                            </>
+                        )}
+                    </div>
+                </motion.div>
+
+            </button>
             <div className='m-2'>
                 <div className='flex items-center justify-center mb-5'>
                     <img src="/utils/feuille.png" alt="" className='h-10' />
@@ -44,13 +115,15 @@ const Produits = () => {
                 <div className='max grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1'>
                     {
                         produits.map((element) => (
-                            <a key={element.name} href='' className='relative group
+                            <button onClick={() => {
+                                setPopupVisible(!isPopupVisible)
+                                setCurrentProduit(element)
+                            }} key={element.name} className='relative group
                            flex flex-col items-center justify-center
                             my-6
                              bg-white hover:bg-green-50 border-2 border-green-300 rounded-2xl  '>
                                 <motion.img src="/produits/produit-1.png" alt=""
-
-                                    variants={Animations.bottomToTop({ duration: 0.3 * produits.indexOf(element), })}
+                                    variants={Animations.scale({ duration: 0.3 * produits.indexOf(element), })}
                                     initial="hidden"
                                     whileInView="show"
                                     className='absolute  -top-8  h-24 group-hover:scale-125' />
@@ -58,12 +131,10 @@ const Produits = () => {
 
                                     <p className='text-xl text-green-800  font-bricolage font-semibold '>{element.name}</p>
                                     <p>{element.description.split("*").map((element2) => (<span className={`${element.description.split("*").indexOf(element2) % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}`}>{element2} </span>))}</p>
-                                    <button onClick={() => {
-
-                                    }} className='text-white hover:text-white w-full py-3 bg-green-400 hover:bg-green-900 border border-white hover:ring ring-green-900 rounded-xl'>Voir</button>
+                                    <a className='text-white hover:text-white w-full py-3 bg-green-400 hover:bg-green-900 border border-white hover:ring ring-green-900 rounded-xl'>Voir</a>
                                 </div>
 
-                            </a>
+                            </button>
                         ))
                     }
                 </div>
