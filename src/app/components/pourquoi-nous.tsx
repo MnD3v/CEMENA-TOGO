@@ -32,11 +32,15 @@ const PourquoiNous = () => {
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6 font-marcellus text-lg'>
                         {
                             raisons.map((element) => (
-                                <div key={element.title} className='space-y-3'>
+                                <motion.div
+                                    variants={Animations.bottomToTop({ duration: 0.3 })}
+                                    initial="hidden"
+                                    whileInView="show"
+                                    key={element.title} className='space-y-3'>
                                     <h2 className='text-lg md:text-2xl'>{element.title}</h2>
                                     <p className='text-sm md:text-base'>{element.description}</p>
                                     <div className='h-px w-full bg-zinc-500 my-4'></div>
-                                </div>
+                                </motion.div>
                             ))
                         }
                     </div>

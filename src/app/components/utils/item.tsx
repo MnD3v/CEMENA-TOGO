@@ -5,7 +5,7 @@ class Animations {
         duration: number, delay?: number, inverse?: boolean
     }) {
         return ({
-            hidden: { opacity: 0, x: inverse == true ? 120 : -120, },
+            hidden: { opacity: 0, x: inverse == true ? 90 : -90, },
             show: {
 
                 opacity: 1,
@@ -21,7 +21,7 @@ class Animations {
 
     static bottomToTop({ duration, inverse, delay }: { duration: number, inverse?: boolean, delay?: number, }) {
         return ({
-            hidden: { opacity: 0, y: inverse == true ? -120 : 120, },
+            hidden: { opacity: 0, y: inverse == true ? -90 : 90, },
             show: {
 
                 opacity: 1,
