@@ -130,7 +130,7 @@ const Produits = () => {
                                 <div className='w-full  flex flex-col items-center p-2 mt-16 text-center'>
 
                                     <p className='text-xl text-green-800  font-bricolage font-semibold '>{element.name}</p>
-                                    <p>{element.description.split("*").map((element2) => (<span className={`${element.description.split("*").indexOf(element2) % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}`}>{element2} </span>))}</p>
+                                    <p>{element.description.split("*").map((element2) => (<span key={element2} className={`${element.description.split("*").indexOf(element2) % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}`}>{element2} </span>))}</p>
                                     <a className='text-white hover:text-white w-full py-3 bg-green-400 hover:bg-green-900 border border-white hover:ring ring-green-900 rounded-xl'>Voir</a>
                                 </div>
 
