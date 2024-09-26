@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import Animations from './utils/item'
 import Popup from 'reactjs-popup';
 const Produits = () => {
-    const [isPopupVisible, setPopupVisible] = useState(false)
     const produits = [
         {
             "image": "produit-1.png",
@@ -63,9 +62,10 @@ const Produits = () => {
                     {
                         produits.map((element) => (
                             <Popup
+                                key={element.name}
                                 trigger={<button onClick={() => {
 
-                                }} key={element.name} className='relative group
+                                }} className='relative group
                            flex flex-col items-center justify-center
                             my-6
                              bg-white hover:bg-green-50 border-2 border-green-300 rounded-2xl '>
