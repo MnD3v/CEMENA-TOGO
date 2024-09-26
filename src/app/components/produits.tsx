@@ -61,6 +61,7 @@ const Produits = () => {
         <div className='relative flex  justify-center items-center py-10 my-10'>
             <button
                 onClick={() => {
+                    document.body.style.overflow = 'auto';
                     setPopupVisible(!isPopupVisible)
                 }}
                 className={` fixed top-0 ${isPopupVisible ? "flex" : "hidden"} justify-center items-center inset-0 bg-black/40 backdrop-blur-sm z-50`}>
@@ -69,7 +70,7 @@ const Produits = () => {
                     initial="hidden"
                     whileInView="show"
                     exit="hidden"
-                    className='flex flex-col w-[350px] max-w-[90vw] bg-white rounded-xl p-4'>
+                    className='flex flex-col w-[850px] max-w-[90vw] max-h-[80vh] bg-white rounded-xl p-4 overflow-y-auto'>
                     <div className='flex justify-between'>
                         <div className='bg-green-500 border border-white ring ring-green-500 px-4 py-2 rounded-lg text-white self-start'>
                             CEMENA-TOGO
@@ -116,6 +117,8 @@ const Produits = () => {
                     {
                         produits.map((element) => (
                             <button onClick={() => {
+                                document.body.style.overflow = 'hidden';
+
                                 setPopupVisible(!isPopupVisible)
                                 setCurrentProduit(element)
                             }} key={element.name} className='relative group
