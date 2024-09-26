@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion'
 import React from 'react'
+import Animations from './utils/item'
 
 const PourquoiNous = () => {
 
@@ -38,7 +40,11 @@ const PourquoiNous = () => {
                             ))
                         }
                     </div>
-                    <img src="/utils/pot.png" alt="" className='relative -bottom-10 h-56 self-center' />
+                    <motion.img src="/utils/pot.png" alt=""
+                        variants={Animations.scale({ duration: 0.5 })}
+                        initial="hidden"
+                        whileInView="show"
+                        className='relative -bottom-10 h-56 self-center' />
                 </div>
 
 

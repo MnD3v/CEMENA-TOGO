@@ -27,9 +27,6 @@ export default function RootLayout({
 
   const socials = [{ icon: "facebook.png", link: "" },
   { icon: "linkedin.png", link: "" },
-  { icon: "twitter.png", link: "" },
-  { icon: "youtube.png", link: "" },
-
   ]
   return (
     <html lang="en">
@@ -48,7 +45,7 @@ export default function RootLayout({
 
         <footer className="relative flex justify-center bg-green-950 p-9 pt-9 md:pt-24 text-white overflow-hidden max-sm:text-sm">
           <div className="absolute bottom-0 right-0 z-0 ">
-            <img src="/utils/feuille-footer.png" alt="" className="h-96" />
+            <img src="/utils/feuille-footer.png" alt="" className="h-60 md:h-96" />
           </div>
           <div className="relative z-10 max flex flex-wrap justify-center gap-9">
 

@@ -38,7 +38,7 @@ const FixedAppBar = ({ fixed }: { fixed?: boolean }) => {
         >
             <div className='max w-full flex justify-between
              items-center
-             py-6 px-4
+             py-4 md:py-6 px-4
              '>
 
                 <a href="#"> <img src="/logo.png" alt="" className='h-12  md:h-16' />
@@ -51,12 +51,12 @@ const FixedAppBar = ({ fixed }: { fixed?: boolean }) => {
                     }} className={`p-2 md:hidden ${menuIsOpen ? 'pointer-events-none' : 'pointer-events-auto'}`}>
                     <img src={"/icons/black-menu.png"} alt="" className='h-5 ' />
                 </button>
-                <ul className={`hidden md:flex items-center justify-center`}>
-                    <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
-                    <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#formations"}>Formations</a></li>
+                <ul className={`hidden md:flex items-center justify-center uppercase`}>
+                    <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-12 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
+                    <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-12 py-3"><a href={inNotHome ? "/" : "#formations"}>Formations</a></li>
 
-                    <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#a-propos"}>A Propos</a></li>
-                    <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 px-6 py-3"><a href={inNotHome ? "/" : "#contact"}>Contact</a></li>
+                    <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-12 py-3"><a href={inNotHome ? "/" : "#a-propos"}>A Propos</a></li>
+                    <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-12 py-3"><a href={inNotHome ? "/" : "#contact"}>Contact</a></li>
                 </ul>
             </div>
 

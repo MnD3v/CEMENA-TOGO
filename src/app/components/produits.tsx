@@ -12,11 +12,18 @@ const Produits = () => {
                 <div className='max grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1'>
                     {
                         [1, 2, 3, 4, 5, 6, 7, 8, 9].map((element) => (
-                            <a key={element} href='' className=' bg-white hover:bg-green-100 hover:scale-105 px-3 border border-green-200 rounded-3xl my-6'>
-                                <div className='relative -top-9 flex flex-col items-center text-center'>
-                                    <img src="/produits/produit-1.png" alt="" className='h-32 ' />
-                                    <p className='text-xl  font-bricolage font-semibold text-green-600'>Sinus</p>
+                            <a key={element} href='' className='relative group
+                           flex flex-col items-center justify-center
+                            my-6
+                             bg-white hover:bg-green-50 border-2 border-green-300 rounded-2xl  '>
+                                <img src="/produits/produit-1.png" alt="" className='absolute  -top-8  h-24 group-hover:scale-125' />
+                                <div className='  flex flex-col items-center p-2 mt-16'>
+
+                                    <p className='text-xl  font-bricolage font-semibold '>Sinus</p>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, {element}</p>
+                                    <button onClick={() => {
+
+                                    }} className='text-white hover:text-white w-full py-3 bg-green-400 hover:bg-green-900 border border-white hover:ring ring-green-900 rounded-xl'>Voir</button>
                                 </div>
 
                             </a>

@@ -7,17 +7,21 @@ const Presentation = () => {
     return (
         <section id='' className="flex justify-center bg-cover">
             <div className='relative w-full flex justify-center overflow-hidden'>
-                <div className='w-full flex flex-col items-center'>
+                <div className='w-full flex flex-col items-center '>
+                    {/* decoration */}
+                    <img src="/utils/deco-2.png" alt="" className='absolute -top-16 z-30 rotate-180 h-96 opacity-10' />
+                    {/* decoration */}
+
                     <AppBar></AppBar>
-                    <div className='md:flex justify-between'>
-                        <div className='w-full md:w-1/2 p-6 space-y-5 md:space-y-10'>
-                            <div className="space-y-3">
+                    <div className=' max w-full md:flex justify-between '>
+                        <div className='w-full md:w-1/2 space-y-5 p-6 md:space-y-10 '>
+                            <div className="space-y-3 ">
                                 <motion.p className='uppercase tracking-wider text-green-700'>Bienvenu chez CEMENA-TOGO</motion.p>
                                 <motion.h1
                                     variants={Animations.bottomToTop({ duration: 0.5 })}
                                     initial="hidden"
                                     whileInView="show"
-                                    className="text-3xl md:text-5xl font-extralight font-marcellus">Des solutions naturel pour votre Santé</motion.h1>
+                                    className="text-3xl md:text-5xl font-extralight font-marcellus">Des solutions naturelles pour votre Santé</motion.h1>
 
                             </div>
                             <div className=" max flex flex-col">
@@ -33,10 +37,8 @@ const Presentation = () => {
                                     initial="hidden"
                                     whileInView="show"
                                     className="font-poppins text-white 
-                                 px-10 py-3
-                                my-3 
-
-                               bg-green-700 border-2 rounded-full
+                                 px-10 py-3 my-3
+                               bg-green-700 hover:bg-green-900 border border-white hover:ring ring-green-900 rounded-full
                                 self-start
                                 ">Contactez-nous</motion.a>
 
