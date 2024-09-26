@@ -93,21 +93,14 @@ const Produits = () => {
                 setPopupVisible(false)
             }
         }
-        const handlePopState = () => {
-            if (isPopupVisible) {
-                document.body.style.overflow = 'auto';
 
-                setPopupVisible(false)
-            }
-        };
-        window.addEventListener('popstate', handlePopState);
+
         document.addEventListener('mousedown', handleClickOutside);
 
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
 
             window.removeEventListener('keydown', handleKeyDown);
-            window.removeEventListener('popstate', handlePopState);
         };
     }, []);
     useEffect(() => {
@@ -115,7 +108,7 @@ const Produits = () => {
     }, [isPopupVisible]);
 
     return (
-        <div className='relative flex  justify-center items-center py-10 my-10'>
+        <section id='produits' className='relative flex  justify-center items-center py-10 my-10'>
             <div
 
                 className={` fixed top-0 ${isPopupVisible ? "flex" : "hidden"} justify-center items-center h-full w-full bg-black/40 backdrop-blur-sm z-50`}>
@@ -148,7 +141,7 @@ const Produits = () => {
                             <>
                                 <img src={`/produits/${currentProduit.image}`} alt="" className='h-40 self-center' />
                                 <div className='p-2 mb-10'>
-                                    <h2 className='text-green-700'>{currentProduit.name}</h2>
+                                    <h2 className='text-green-700 font-semibold font-bricolage'>{currentProduit.name}</h2>
                                     <p className='text-start'>
                                         {currentProduit.full_description.split("*").map((element3, index) => (
                                             <span
@@ -198,17 +191,19 @@ const Produits = () => {
                             }} key={element.name} className='relative group
                            flex flex-col items-center justify-center
                             my-6
-                             bg-white hover:bg-green-50 border-2 border-green-300 rounded-2xl '>
+                             bg-white hover:bg-green-50 border-2 border-green-500 rounded-2xl '>
                                 <motion.img src="/produits/produit-1.png" alt=""
                                     variants={Animations.scale({ duration: 0.3 * produits.indexOf(element), })}
                                     initial="hidden"
                                     whileInView="show"
                                     className='absolute  -top-8  h-24 group-hover:scale-125' />
-                                <div className='w-full  flex flex-col items-center p-2 mt-16 text-center'>
+                                <div className='w-full h-full  flex flex-col justify-between items-center p-2 mt-16 text-center'>
 
-                                    <p className='text-xl text-green-800  font-bricolage font-semibold '>{element.name}</p>
-                                    <p>{element.description.split("*").map((element2) => (<span key={element2} className={`${element.description.split("*").indexOf(element2) % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}`}>{element2} </span>))}</p>
-                                    <a className='text-white hover:text-white w-full py-3 bg-green-400 hover:bg-green-900 border border-white hover:ring ring-green-900 rounded-xl'>Voir</a>
+                                    <div>
+                                        <p className='text-xl text-green-800  font-bricolage font-semibold '>{element.name}</p>
+                                        <p>{element.description.split("*").map((element2) => (<span key={element2} className={`${element.description.split("*").indexOf(element2) % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}`}>{element2} </span>))}</p>
+                                    </div>
+                                    <a className='text-white hover:text-white w-full py-3 bg-green-600 hover:bg-green-900 border border-white hover:ring ring-green-900 rounded-xl'>Voir</a>
                                 </div>
 
                             </button>
@@ -219,7 +214,7 @@ const Produits = () => {
             </div>
 
 
-        </div>
+        </section>
     )
 }
 

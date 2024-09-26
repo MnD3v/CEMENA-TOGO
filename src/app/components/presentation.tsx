@@ -9,7 +9,7 @@ const Presentation = () => {
             <div className='relative w-full flex justify-center overflow-hidden'>
                 <div className='w-full flex flex-col items-center '>
                     {/* decoration */}
-                    <img src="/utils/deco-2.png" alt="" className='absolute -top-16 z-30 rotate-180 h-96 opacity-10' />
+                    <img src="/utils/deco-2.png" alt="" className='absolute -top-16 z-30 rotate-180 h-96 opacity-10 pointer-events-none' />
                     {/* decoration */}
 
                     <AppBar></AppBar>

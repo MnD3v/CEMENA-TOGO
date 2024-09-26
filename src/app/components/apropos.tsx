@@ -7,7 +7,7 @@ const APropos = () => {
                 <p className='font-medium text-green-600'>A PROPOS DE CEMENA-TOGO</p>
                 <div className='my-4 space-y-3 '>
                     <p className='font-marcellus text-3xl text-center'>
-                        Bienvenue chez CEMENA-TOGO, votre Centre d'Etude en Médecine Naturelle dédié à votre bien-être.
+                        Bienvenue chez <span className='font-bold text-green-700'>CEMENA-TOGO</span> , votre Centre d'Etude en Médecine Naturelle dédié à votre bien-être.
 
                     </p>
 
