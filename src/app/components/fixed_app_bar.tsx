@@ -31,7 +31,7 @@ const FixedAppBar = ({ fixed }: { fixed?: boolean }) => {
     }, [])
 
     return (
-        <motion.div className={` fixed flex justify-center  text-black bg-white  w-full shadow z-50`}
+        <motion.div className={`font-bricolage fixed flex justify-center  text-black bg-white  w-full shadow z-50`}
             initial={{ y: -200 }}
             animate={{ y: fixed == true ? 0 : showAppBar ? 0 : -200, }}
 
@@ -41,7 +41,7 @@ const FixedAppBar = ({ fixed }: { fixed?: boolean }) => {
              py-4 md:py-6 px-4
              '>
 
-                <div className='flex'>
+                <div className='flex items-end'>
                     <a href={inNotHome ? "/" : "#"}> <img src="/logo.png" alt="" className="h-12 md:h-16" />
                     </a>
                     <img src="/logo-suite.png" alt="" className="h-10 md:h-14" />

@@ -8,7 +8,7 @@ const Produits = () => {
     const produits = [
         {
             "image": "produit-1.png",
-            "name": "Sinus",
+            "name": "SINUS",
             "description": "Remède contre les *sinusites*",
             "full_description": "Sinus est un remède naturel conçu pour soulager les symptômes des *sinusites*. En réduisant l'inflammation et en facilitant la respiration, il aide à éliminer les douleurs liées aux *sinusites chroniques* ou aiguës. L'efficacité est notable dès les premières utilisations, avec une amélioration significative après deux semaines de traitement."
         },
@@ -71,6 +71,19 @@ const Produits = () => {
             "name": "ULCERURE",
             "description": "Solution contre *les ulcères sous toutes leurs formes*",
             "full_description": "ULCERURE est un traitement naturel qui agit rapidement pour soulager et guérir les *ulcères gastriques* et *duodénaux*. Il apaise les parois de l'estomac, réduit l'acidité et favorise la cicatrisation. Les premiers signes de guérison apparaissent après une semaine d'utilisation."
+        }
+        ,
+        {
+            "image": "produit-12.png",
+            "name": "NEURO FORCE",
+            "description": "Solution idéale pour *les problèmes de nerfs*",
+            "full_description": "NEURO FORCE est un traitement naturel conçu pour soulager les troubles liés au système nerveux. Il aide à apaiser les nerfs, réduire le stress et améliorer la santé neurologique. Ce produit favorise un rétablissement rapide et efficace des fonctions nerveuses, apportant un soulagement notable dès les premières utilisations."
+        },
+        {
+            "image": "produit-13.png",
+            "name": "HERNICIDE",
+            "description": "Remède très efficace contre *l'hernie*",
+            "full_description": "HERNICIDE est une solution naturelle hautement efficace contre les hernies. Il agit en réduisant l'inflammation et en renforçant les muscles abdominaux. Ce produit permet de soulager rapidement la douleur et de prévenir les complications liées aux hernies, offrant un traitement durable et sans effets secondaires."
         }
     ]
 
@@ -179,14 +192,17 @@ const Produits = () => {
                                     </p>
                                 </div>
 
-                                <div className=' absolute bottom-0 w-full grid grid-cols-2 justify-center space-x-1 p-2 bg-white'>
+                                <div className='font-bold font-bricolage absolute bottom-0 w-full grid grid-cols-2 justify-center space-x-1 p-2 bg-white'>
                                     <a href="tel:+22893452172" target='_blank' className='flex justify-center items-center bg-green-600 border-2 border-green-500 
                                     px-10 py-2
                                  
                                     rounded-md h-auto'>
-                                        <p className='text-white'>Appeler</p>
+                                        <div className='flex justify-center items-center space-x-2 text-white'>
+                                            <img src="/icons/white-phone.png" alt="" className='h-7 m-1' />
+                                            Appeler
+                                        </div>
                                     </a>
-                                    <a href='https://wa.me/22893452172' target='_blank' className=' bg-white border-2 border-green-500 rounded-md p-2'>
+                                    <a href={'https://wa.me/22893452172' + `?text=Bonjour, j'ai besoin de ${currentProduit.name} pour mes soins. C'est disponible ?`} target='_blank' className=' bg-white border-2 border-green-500 rounded-md p-2'>
                                         <div className='flex justify-center items-center space-x-2 text-green-600'>
                                             <img src="/icons/whatsapp.png" alt="" className='h-9' />
                                             Whatsapp

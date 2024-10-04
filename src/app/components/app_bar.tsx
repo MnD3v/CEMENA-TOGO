@@ -44,7 +44,7 @@ const AppBar = () => {
 
 
     return (
-        <div className='w-full'>
+        <div className='w-full font-bricolage'>
 
 
             <div className={` fixed ${menuIsOpen ? "block" : "hidden"} h-full w-full bg-black/30`}>
@@ -71,7 +71,7 @@ const AppBar = () => {
                         <ul className="max flex uppercase">
                             <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
                             <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#formations"}>Services</a></li>
-                            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#produits"}>Nos produits</a></li>
+                            <li className="hover:text-green-600 font-semibold  pl-9 py-3"><a href={inNotHome ? "/" : "#produits"}>Nos produits</a></li>
 
                             <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#a-propos"}>A Propos</a></li>
                             <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#contact"}>Contact</a></li>
@@ -113,7 +113,7 @@ const MobileAppBar = ({ menuRef, menuIsOpen, inNotHome }: { menuRef: React.RefOb
         <ul className={`flex flex-col items-center justify-center  uppercase`}>
             <li className="hover:text-green-600 font-semibold px-6 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
             <li className="hover:text-green-600 font-semibold px-6 py-3"><a href={inNotHome ? "/" : "#formations"}>SERVICES</a></li>
-            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#produits"}>Nos produits</a></li>
+            <li className="hover:text-green-600 font-semibold px-6 py-3"><a href={inNotHome ? "/" : "#produits"}>Nos produits</a></li>
             <li className="hover:text-green-600 font-semibold px-6 py-3"><a href={inNotHome ? "/" : "#a-propos"}>A Propos</a></li>
             <li className="hover:text-green-600 font-semibold px-6 py-3"><a href={inNotHome ? "/" : "#contact"}>Contact</a></li>
         </ul>
