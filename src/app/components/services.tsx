@@ -110,7 +110,7 @@ const Services = () => {
 
                                 <h3 className='font-semibold font-bricolage text-green-600'>{element.numero}.</h3>
 
-                                <p className='text-xl text-zinc-950-900 font-bold font-bricolage'>{element.titre}</p>
+                                <p className='text-xl text-blue-900 font-bold font-bricolage'>{element.titre}</p>
                                 <p className='text-zinc-600'>{element.description}</p>
 
                             </div>
