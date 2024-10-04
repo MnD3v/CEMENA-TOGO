@@ -61,19 +61,19 @@ const Presentation = () => {
                         <div className=''>
                             <div className='flex justify-center'>
                                 <div className='m-2 space-y-4'>
-                                    <motion.img src={"/presentation/m-1.png"} alt=""
+                                    <motion.img src={"/presentation/m-1.jpeg"} alt=""
                                         variants={Animations.bottomToTop({ duration: 0.5, inverse: true })}
                                         initial="hidden"
                                         whileInView="show"
                                         className='rounded-xl rounded-bl-[80px] rounded-tr-[80px] w-44 max-w-[40vw] h-44 object-cover' />
-                                    <motion.img src={"/presentation/m-2.png"} alt=""
+                                    <motion.img src={"/presentation/m-2.jpeg"} alt=""
                                         variants={Animations.bottomToTop({ duration: 0.5, })}
                                         initial="hidden"
                                         whileInView="show"
                                         className='rounded-xl rounded-tl-[80px] rounded-br-[80px] w-44 max-w-[40vw] h-60 object-cover' />
                                 </div>
                                 <div className='m-2 space-y-4'>
-                                    <motion.img src={"/presentation/m-3.png"} alt=""
+                                    <motion.img src={"/presentation/m-3.jpeg"} alt=""
                                         variants={Animations.leftToRight({ duration: 0.5, inverse: true })}
                                         initial="hidden"
                                         whileInView="show"
@@ -82,7 +82,7 @@ const Presentation = () => {
                                         variants={Animations.scale({ duration: 0.5, })}
                                         initial="hidden"
                                         whileInView="show"
-                                        src={"/presentation/m-4.png"} alt="" className='rounded-xl rounded-bl-[80px] rounded-tr-[80px] w-44 max-w-[40vw] h-44 object-cover' />
+                                        src={"/presentation/m-4.jpeg"} alt="" className='rounded-xl rounded-bl-[80px] rounded-tr-[80px] w-44 max-w-[40vw] h-44 object-cover' />
                                 </div>
                             </div>
                         </div>

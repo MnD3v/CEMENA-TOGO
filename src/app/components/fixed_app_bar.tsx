@@ -41,8 +41,11 @@ const FixedAppBar = ({ fixed }: { fixed?: boolean }) => {
              py-4 md:py-6 px-4
              '>
 
-                <a href="#"> <img src="/logo.png" alt="" className='h-12  md:h-16' />
-                </a>
+                <div className='flex'>
+                    <a href={inNotHome ? "/" : "#"}> <img src="/logo.png" alt="" className="h-12 md:h-16" />
+                    </a>
+                    <img src="/logo-suite.png" alt="" className="h-10 md:h-14" />
+                </div>
                 <button
                     onClick={() => {
 
@@ -51,7 +54,7 @@ const FixedAppBar = ({ fixed }: { fixed?: boolean }) => {
                     }} className={`p-2 md:hidden ${menuIsOpen ? 'pointer-events-none' : 'pointer-events-auto'}`}>
                     <img src={"/icons/black-menu.png"} alt="" className='h-5 ' />
                 </button>
-                <ul className={`hidden md:flex items-center justify-center uppercase`}>
+                <ul className={`hidden lg:flex items-center justify-center uppercase`}>
                     <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
                     <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#formations"}>Services</a></li>
                     <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#produits"}>Nos produits</a></li>

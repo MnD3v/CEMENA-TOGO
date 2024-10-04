@@ -53,16 +53,20 @@ const AppBar = () => {
             <MobileAppBar inNotHome={inNotHome} menuIsOpen={menuIsOpen} menuRef={menuRef}></MobileAppBar>
             <div className='w-full flex justify-center'>
                 <div className='max w-full p-6 flex flex-col items-center '>
-                    <div className="max w-full  justify-between hidden md:flex">
+                    <div className="max w-full  justify-between hidden lg:flex">
 
 
 
 
 
                     </div>
-                    <div className='w-full hidden md:flex items-center justify-between '>
-                        <a href={inNotHome ? "/" : "#"}> <img src="/logo.png" alt="" className="h-12 md:h-16" />
-                        </a>
+                    <div className='w-full hidden lg:flex items-center justify-between '>
+                        <div className='flex items-end'>
+                            <a href={inNotHome ? "/" : "#"}> <img src="/logo.png" alt="" className="h-12 md:h-16" />
+                            </a>
+                            <img src="/logo-suite.png" alt="" className="h-10 md:h-14" />
+                        </div>
+
 
                         <ul className="max flex uppercase">
                             <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
@@ -73,8 +77,12 @@ const AppBar = () => {
                             <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#contact"}>Contact</a></li>
                         </ul>
                     </div>
-                    <div className='flex w-full justify-between md:hidden items-center'>
-                        <img src="/logo.png" alt="" className="h-12 md:h-16" />
+                    <div className='flex w-full justify-between lg:hidden items-center'>
+                        <div className='flex items-end'>
+                            <a href={inNotHome ? "/" : "#"}> <img src="/logo.png" alt="" className="h-12 md:h-16" />
+                            </a>
+                            <img src="/logo-suite.png" alt="" className="h-10 md:h-14" />
+                        </div>
                         <button
                             onClick={() => {
 
@@ -111,7 +119,9 @@ const MobileAppBar = ({ menuRef, menuIsOpen, inNotHome }: { menuRef: React.RefOb
         </ul>
         <div className="flex flex-wrap gap-4">
 
+
             <img src="/logo.png" alt="" className="h-14" />
+
 
             <div className=" font-bricolage gap-6 items-center space-y-3">
                 <div className='flex'>
