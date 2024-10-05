@@ -178,7 +178,7 @@ const Produits = () => {
                         {currentProduit && (
                             <>
                                 <img src={`/produits/${currentProduit.image}`} alt="" className='h-40 self-center' />
-                                <div className='p-2 mb-10'>
+                                <div className='p-2 mb-2'>
                                     <h2 className='text-green-700 font-semibold font-bricolage'>{currentProduit.name}</h2>
                                     <p className='text-start'>
                                         {currentProduit.full_description.split("*").map((element3, index) => (
@@ -192,7 +192,7 @@ const Produits = () => {
                                     </p>
                                 </div>
 
-                                <div className='font-bold font-bricolage absolute bottom-0 w-full grid grid-cols-2 justify-center space-x-1 p-2 bg-white'>
+                                <div className='font-bold font-bricolage   w-full grid grid-cols-2 justify-center space-x-1 p-2 bg-white'>
                                     <a href="tel:+22893452172" target='_blank' className='flex justify-center items-center bg-green-600 border-2 border-green-500 
                                     px-10 py-2
                                  
