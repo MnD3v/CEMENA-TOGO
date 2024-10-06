@@ -28,7 +28,7 @@ const Produits = () => {
             "image": "produit-4.png",
             "name": "GRAND PURIFICATEUR",
             "description": "Purifie l'organisme, efficace contre les *hémorroïdes internes et externes*",
-            "full_description": "Le GRAND PURIFICATEUR est un remède naturel destiné à purifier l'organisme en agissant sur les *hémorroïdes internes* et *externes*. Il aide à réduire l'inflammation, soulage la douleur et favorise la guérison des tissus endommagés et *le retour normal du cycle menstruel chez les femmes*. Un soulagement notable se fait sentir après quelques jours d'utilisation."
+            "full_description": "Le GRAND PURIFICATEUR est un remède naturel destiné à purifier l'organisme en agissant sur les *hémorroïdes internes* et *externes*. Il aide à réduire l'inflammation, soulage la douleur, favorise la guérison des tissus endommagés et *le retour normal du cycle menstruel chez les femmes*. Un soulagement notable se fait sentir après quelques jours d'utilisation."
         },
         {
             "image": "produit-5.png",
