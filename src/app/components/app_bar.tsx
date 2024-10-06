@@ -64,9 +64,12 @@ const AppBar = () => {
                         <div className='flex items-end'>
                             <a href={inNotHome ? "/" : "#"}> <img src="/logo.png" alt="" className="h-12 md:h-16" />
                             </a>
-                            <div className='text-2xl md:text-4xl text-green-700'>
-                                <p >Cabinet d'Etude en</p>
-                                <p>Médecine Naturelle</p>
+                            <div className='flex items-end'>
+                                <div className='h-10 md:h-12 w-1 bg-red-500 mx-1 rounded-l-lg'></div>
+                                <div className='font-bold text-xl md:text-2xl text-green-800 relative -bottom-2'>
+                                    <p >Cabinet d'Etude en</p>
+                                    <p>Médecine Naturelle</p>
+                                </div>
                             </div>
                         </div>
 

@@ -44,14 +44,20 @@ const FixedAppBar = ({ fixed }: { fixed?: boolean }) => {
                 <div className='flex items-end'>
                     <a href={inNotHome ? "/" : "#"}> <img src="/logo.png" alt="" className="h-12 md:h-16" />
                     </a>
-                    <img src="/logo-suite.png" alt="" className="h-10 md:h-14" />
+                    <div className='flex items-end'>
+                        <div className='h-10 md:h-12 w-1 bg-red-500 mx-1 rounded-l-lg'></div>
+                        <div className='font-bold text-xl md:text-2xl text-green-800 relative -bottom-2'>
+                            <p >Cabinet d'Etude en</p>
+                            <p>Médecine Naturelle</p>
+                        </div>
+                    </div>
                 </div>
                 <button
                     onClick={() => {
 
                         setMenuIsOpen((!menuIsOpen))
                         console.log(menuIsOpen)
-                    }} className={`p-2 md:hidden ${menuIsOpen ? 'pointer-events-none' : 'pointer-events-auto'}`}>
+                    }} className={`p-2 lg:hidden ${menuIsOpen ? 'pointer-events-none' : 'pointer-events-auto'}`}>
                     <img src={"/icons/black-menu.png"} alt="" className='h-5 ' />
                 </button>
                 <ul className={`hidden lg:flex items-center justify-center uppercase`}>
