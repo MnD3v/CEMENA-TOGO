@@ -34,7 +34,7 @@ const Produits = () => {
             "image": "produit-5.png",
             "name": "STÉFINISH",
             "description": "Remède efficace contre *l'infertilité féminine*",
-            "full_description": "STÉFINISH est un remède naturel conçu pour lutter contre *l'infertilité féminine* en régulant le cycle menstruel et en stimulant la *fertilité*. Il améliore la santé reproductive générale, avec des résultats visibles après trois mois de traitement."
+            "full_description": "STÉFINISH est un remède naturel conçu pour lutter contre *l'infertilité féminine* en régulant le cycle menstruel et en stimulant la *fertilité*. Il améliore la santé reproductive générale, avec des résultats visibles après un mois de traitement."
         },
         {
             "image": "produit-6.png",
@@ -46,7 +46,7 @@ const Produits = () => {
             "image": "produit-7.png",
             "name": "HÉPATO BILIAIRE",
             "description": "Remède contre *l'hépatite A, B & C, les problèmes biliaires, et le paludisme*",
-            "full_description": "HÉPATO BILIAIRE est un remède naturel puissant qui aide à soigner les affections du *foie* et de la *vésicule biliaire*, y compris *l'hépatite* et le *paludisme*. Il purifie le sang et renforce les défenses naturelles de l'organisme, avec des résultats notables après un mois de traitement."
+            "full_description": "HÉPATO BILIAIRE est un remède naturel puissant qui aide à soigner les affections du *foie* et assure la bonne sécretion de la *vésicule biliaire*, y compris *l'hépatite* et le *paludisme*. Il purifie le sang et allège les fatigues quotidiennes, avec des résultats notables après un mois de traitement."
         },
         {
             "image": "produit-8.png",
@@ -58,7 +58,7 @@ const Produits = () => {
             "image": "produit-9.png",
             "name": "FRIGIDOS",
             "description": "Intervient dans les cas de *manque de sensation lors des rapports sexuels chez les femmes*",
-            "full_description": "FRIGIDOS est un remède naturel qui stimule les *sensations* et la *libido* chez les femmes. Il améliore la réponse sexuelle en augmentant le flux sanguin vers les organes génitaux, aidant ainsi à retrouver une vie sexuelle épanouie. Les premiers résultats apparaissent après deux semaines de traitement."
+            "full_description": "FRIGIDOS est un remède naturel qui stimule les *sensations* et la *libido* chez les femmes. Il améliore la réponse sexuelle en augmentant le flux sanguin vers les organes génitaux, aidant ainsi à retrouver une vie sexuelle épanouie. Les premiers résultats apparaissent dès le debut d'utilisation."
         },
         {
             "image": "produit-10.png",
@@ -74,16 +74,16 @@ const Produits = () => {
         }
         ,
         {
-            "image": "produit-12.png",
+            "image": "produit-13.png",
             "name": "NEURO FORCE",
-            "description": "Solution idéale pour *les problèmes de nerfs*",
-            "full_description": "NEURO FORCE est un traitement naturel conçu pour soulager les troubles liés au système nerveux. Il aide à apaiser les nerfs, réduire le stress et améliorer la santé neurologique. Ce produit favorise un rétablissement rapide et efficace des fonctions nerveuses, apportant un soulagement notable dès les premières utilisations."
+            "description": "Solution idéale pour *les crampes musculaires*",
+            "full_description": "NEURO FORCE est un traitement naturel conçu pour eviter et soulager les *crampes musculaires*. Il aide à détendre les muscles, réduire la fréquence et l'intensité des crampes, et favoriser une récupération rapide. Ce produit offre un soulagement efficace dès les premières utilisations, améliorant le confort musculaire et la mobilité."
         },
         {
-            "image": "produit-13.png",
+            "image": "produit-12.png",
             "name": "HERNICIDE",
             "description": "Remède très efficace contre *l'hernie*",
-            "full_description": "HERNICIDE est une solution naturelle hautement efficace contre les hernies. Il agit en réduisant l'inflammation et en renforçant les muscles abdominaux. Ce produit permet de soulager rapidement la douleur et de prévenir les complications liées aux hernies, offrant un traitement durable et sans effets secondaires."
+            "full_description": "HERNICIDE est une solution naturelle hautement efficace contre *les hernies*. Il agit en réduisant *l'inflammation et en renforçant les muscles abdominaux*. Ce produit permet de soulager rapidement la douleur et de prévenir les complications liées aux hernies, offrant un traitement durable et sans effets secondaires."
         }
     ]
 

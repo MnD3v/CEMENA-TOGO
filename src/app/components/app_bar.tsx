@@ -64,7 +64,10 @@ const AppBar = () => {
                         <div className='flex items-end'>
                             <a href={inNotHome ? "/" : "#"}> <img src="/logo.png" alt="" className="h-12 md:h-16" />
                             </a>
-                            <img src="/logo-suite.png" alt="" className="h-10 md:h-14" />
+                            <div className='text-2xl md:text-4xl text-green-700'>
+                                <p >Cabinet d'Etude en</p>
+                                <p>Médecine Naturelle</p>
+                            </div>
                         </div>
 
 
@@ -81,7 +84,14 @@ const AppBar = () => {
                         <div className='flex items-end'>
                             <a href={inNotHome ? "/" : "#"}> <img src="/logo.png" alt="" className="h-12 md:h-16" />
                             </a>
-                            <img src="/logo-suite.png" alt="" className="h-10 md:h-14" />
+                            <div className='flex items-end'>
+                                <div className='h-10 md:h-12 w-1 bg-red-500 mx-1 rounded-l-lg'></div>
+                                <div className='font-bold text-xl md:text-2xl text-green-800 relative -bottom-2'>
+                                    <p >Cabinet d'Etude en</p>
+                                    <p>Médecine Naturelle</p>
+                                </div>
+                            </div>
+
                         </div>
                         <button
                             onClick={() => {
@@ -127,8 +137,8 @@ const MobileAppBar = ({ menuRef, menuIsOpen, inNotHome }: { menuRef: React.RefOb
                 <div className='flex'>
                     <img src="/icons/clock.png" alt="" className='h-4 m-1' />
                     <div>
-                        <p className="font-semibold">Lundi - Samedi 08:00 - 19:00</p>
-                        <p>Dimanches - FERMÉ</p>
+                        <p className="">Lundi - Vendredi <span className='font-bold'>08:00 - 19:00</span></p>
+                        <p>Samedi - Dimanche  <span className='font-bold'>FERMÉ</span></p>
                     </div>
                 </div>
 
