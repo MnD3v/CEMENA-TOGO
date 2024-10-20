@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.cemena-togo.com
+
+# Sitemaps
+Sitemap: https://www.cemena-togo.com/sitemap.xml
