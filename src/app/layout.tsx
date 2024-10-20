@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://www.cemena-togo.com',
-    title: 'CEMENA-TOGO | Médecine traditionnelle au Togo',
-    description: 'Découvrez la médecine traditionnelle et les soins naturels disponibles au Togo pour une santé meilleure.',
+    title: 'CEMENA-TOGO | Médecine naturelle au Togo',
+    description: 'Découvrez la médecine naturelle et les soins naturels disponibles au Togo pour une santé meilleure.',
     images: [
       {
         url: 'https://i.ibb.co/SrqJdSg/Group-1-1.png',
