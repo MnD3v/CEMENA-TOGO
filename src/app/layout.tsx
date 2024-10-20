@@ -16,7 +16,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "CEMENA-TOGO",
-  description: "Médecine traditionnel au Togo",
+  description: "Médecine naturelle au Togo",
   openGraph: {
     type: 'website',
     url: 'https://www.cemena-togo.com',
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
         url: 'https://i.ibb.co/SrqJdSg/Group-1-1.png',
         width: 1200,
         height: 630,
-        alt: 'Médicaments et soins traditionnels au Togo',
+        alt: 'Médicaments et soins naturels au Togo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'CEMENA-TOGO | Soins naturels et traditionnels',
-    description: 'Un guide complet sur les soins médicaux traditionnels au Togo.',
+    title: 'CEMENA-TOGO | Soins naturels',
+    description: 'Un guide complet sur les soins médicaux naturels au Togo.',
   },
   
 };
@@ -71,7 +71,7 @@ export default function RootLayout({
 
             <div>
               <img src="/logo.png" alt="" className="w-24 md:w-48" />
-              <p className="w-80 mt-6">Chez CEMENA-TOGO, des solutions naturelles sur mesure pour améliorer votre bien-être et renforcer votre santé, en combinant tradition et innovation.</p>
+              <p className="w-80 mt-6">Chez CEMENA-TOGO, des solutions naturelles sur mesure pour améliorer votre bien-être et renforcer votre santé, en combinant nature et innovation.</p>
 
             </div>
             <div className="pt-6 w-80 font-poppins">
