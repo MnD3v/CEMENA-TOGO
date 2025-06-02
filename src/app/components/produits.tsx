@@ -84,6 +84,12 @@ const Produits = () => {
             "name": "HERNICIDE",
             "description": "Remède très efficace contre *l'hernie*",
             "full_description": "HERNICIDE est une solution naturelle hautement efficace contre *les hernies*. Il agit en réduisant *l'inflammation et en renforçant les muscles abdominaux*. Ce produit permet de soulager rapidement la douleur et de prévenir les complications liées aux hernies, offrant un traitement durable et sans effets secondaires."
+        },
+        {
+            "image": "produit-14.png",
+            "name": "HEMOFINE",
+            "description": "Remède très efficace pour la perte du *ventre* et du *poids*",
+            "full_description": "Ce remède naturel est conçu pour aider efficacement à la *perte de poids*, en ciblant particulièrement *la graisse abdominale*. Il agit en accélérant le métabolisme, en réduisant l'accumulation de graisses autour du ventre et en facilitant l'élimination des toxines. Grâce à ses propriétés coupe-faim et brûle-graisses, il favorise un amincissement progressif et durable. Idéal pour retrouver un ventre plat, ce produit soutient également la digestion et l’équilibre du corps sans provoquer d'effets secondaires."
         }
     ]
 
