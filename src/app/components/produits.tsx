@@ -90,7 +90,57 @@ const Produits = () => {
             "name": "HEMOFINE",
             "description": "Remède très efficace pour la perte du *ventre* et du *poids*",
             "full_description": "Ce remède naturel est conçu pour aider efficacement à la *perte de poids*, en ciblant particulièrement *la graisse abdominale*. Il agit en accélérant le métabolisme, en réduisant l'accumulation de graisses autour du ventre et en facilitant l'élimination des toxines. Grâce à ses propriétés coupe-faim et brûle-graisses, il favorise un amincissement progressif et durable. Idéal pour retrouver un ventre plat, ce produit soutient également la digestion et l’équilibre du corps sans provoquer d'effets secondaires."
-        }
+        },
+          {
+        "image": "Déchargeur.png",
+        "name": "DÉCHARGEUR",
+        "description": "Remède naturel pour le *foie*",
+        "full_description": "Déchargeur est une formule naturelle conçue pour purifier le foie et favoriser l’élimination des toxines. Recommandé en cas de fatigue hépatique, de pieds lourds, d’œdèmes des jambes ou de consommation régulière d’alcool, il aide à soutenir le bon fonctionnement du foie et améliore le bien-être général."
+    },
+    {
+        "image": "Collyre CEMENA.png",
+        "name": "COLLYRE CEMENA",
+        "description": "Soin naturel pour les *yeux*",
+        "full_description": "Collyre CEMENA est une formule naturelle conçue pour soulager, protéger et améliorer la santé des yeux. Recommandé en cas de vision floue, fatigue oculaire, sécheresse, glaucome ou début de cataracte, il aide à préserver le confort visuel et à maintenir une bonne santé oculaire au quotidien."
+    },
+    {
+        "image": "Fibrocure.png",
+        "name": "FIBROCURE",
+        "description": "Solution naturelle contre les *fibromes*",
+        "full_description": "Fibrocure est un produit naturel spécialement conçu pour les femmes souffrant de fibromes et d’endométriose. Grâce à sa composition à base de plantes africaines, il aide à soulager les douleurs, réduire les inconforts et améliorer le bien-être féminin."
+    },
+
+    {
+        "image": "Régulateur Liquide.png",
+        "name": "RÉGULATEUR LIQUIDE",
+        "description": "Solution naturelle pour la *tension artérielle*",
+        "full_description": "Régulateur Liquide est une solution naturelle à base d’ail et de citronnelle, conçue pour aider à réguler la tension artérielle. Il contribue à apaiser les troubles liés à l’hypotension et à l’hypertension, tout en favorisant le bien-être général et une meilleure circulation sanguine."
+    },
+    {
+        "image": "Régulateur Poudre.png",
+        "name": "RÉGULATEUR POUDRE",
+        "description": "Remède naturel pour une *tension stable*",
+        "full_description": "Régulateur Poudre est un remède naturel formulé à base d’ail et d’anone. Il aide à maintenir une tension stable, réduit les malaises liés aux variations de tension et soutient l’équilibre cardiovasculaire au quotidien."
+    },
+    {
+        "image": "Merci Tonton.png",
+        "name": "MERCI TONTON",
+        "description": "Solution naturelle pour la *vigueur masculine*",
+        "full_description": "Merci Tonton est un complément naturel conçu pour accompagner les hommes confrontés à l’éjaculation précoce et aux troubles de l’érection. Sa formule aide à améliorer les performances masculines, renforcer l’endurance, soutenir une érection plus ferme et favoriser une meilleure confiance lors des rapports."
+    },
+    {
+        "image": "Puissance 3.png",
+        "name": "PUISSANCE 3",
+        "description": "Complément naturel pour les *performances masculines*",
+        "full_description": "Puissance 3 est un complément naturel conçu pour améliorer les performances masculines. Il aide à lutter contre l’éjaculation précoce, favorise l’endurance et contribue à une meilleure satisfaction lors des rapports sexuels."
+    },
+    {
+        "image": "Coeur.png",
+        "name": "CŒUR",
+        "description": "Soutien naturel pour le *bien-être cardiovasculaire*",
+        "full_description": "Cœur est un produit fabriqué à base de Miel de Manuka, conçu pour soutenir le bien-être cardiovasculaire. Il contribue à apaiser les inconforts cardiaques, favorise une meilleure circulation et participe au maintien d’une bonne santé du système cardiovasculaire."
+    }
+
     ]
 
     const [currentProduit, setCurrentProduit] = useState<{
@@ -153,106 +203,133 @@ const Produits = () => {
 
     return (
         <section id='produits' className='relative flex  justify-center items-center py-10 my-10'>
-            <div
-
-                className={` fixed top-0 ${isPopupVisible ? "flex" : "hidden"} justify-center items-center h-full w-full bg-black/40 backdrop-blur-sm z-50`}>
+            <div className={`fixed top-0 left-0 ${isPopupVisible ? "flex" : "hidden"} justify-center items-end md:items-center h-full w-full bg-black/60 backdrop-blur-sm z-50`}>
                 <motion.div
                     ref={popupRef}
-                    variants={Animations.opacity({ duration: 0.2 })}
+                    variants={Animations.bottomToTop({ duration: 0.25 })}
                     initial="hidden"
                     whileInView="show"
                     exit="hidden"
-                    className='flex flex-col w-[550px] max-w-[90vw] max-h-[80vh] bg-white rounded-xl overflow-y-auto scroll-smooth'>
-                    <div className='flex justify-between p-2'>
-                        <div className='bg-green-500 border border-white ring ring-green-500 px-4 py-2 rounded-lg text-white self-start'>
-                            CEMENA-TOGO
-                        </div>
-                        <button onClick={() => {
+                    className='flex flex-col w-full md:w-[520px] max-h-[90vh] md:max-h-[85vh] bg-white md:rounded-2xl rounded-t-3xl overflow-hidden shadow-2xl'>
 
+                    {currentProduit && (
+                        <>
+                            {/* Header avec image */}
+                            <div className='relative bg-green-700 flex flex-col items-center pt-8 pb-16'>
+                                {/* Bouton fermer */}
+                                <button
+                                    onClick={() => { document.body.style.overflow = 'auto'; setPopupVisible(false); }}
+                                    className='absolute top-4 right-4 p-2 rounded-full bg-white/20 hover:bg-white/30'
+                                >
+                                    <img src="/icons/close.png" alt="" className='h-4 brightness-0 invert' />
+                                </button>
 
+                                {/* Badge */}
+                                <span className='text-green-200 text-xs uppercase tracking-widest font-semibold mb-3'>CEMENA-TOGO</span>
 
-                            document.body.style.overflow = 'auto';
+                                {/* Image produit */}
+                                <img
+                                    src={`/produits/${currentProduit.image}`}
+                                    alt=""
+                                    className='h-36 drop-shadow-2xl'
+                                />
+                            </div>
 
+                            {/* Contenu scrollable */}
+                            <div className='flex flex-col overflow-y-auto'>
 
-                            setPopupVisible(!isPopupVisible)
+                                {/* Nom du produit */}
+                                <div className='px-6 pt-6 pb-4 border-b border-gray-100'>
+                                    <h2 className='text-green-800 text-2xl font-bold font-bricolage'>{currentProduit.name}</h2>
+                                    <p className='text-green-600 text-xs uppercase tracking-widest mt-1'>Remède naturel</p>
+                                </div>
 
-                        }} className='p-4 rounded-full bg-red-500'>
-                            <img src="/icons/close.png" alt="" className='h-4' />
-                        </button>
-                    </div>
-                    <div className='relative w-full flex flex-col '>
-                        {currentProduit && (
-                            <>
-                                <img src={`/produits/${currentProduit.image}`} alt="" className='h-40 self-center' />
-                                <div className='p-2 mb-2'>
-                                    <h2 className='text-green-700 font-semibold font-bricolage'>{currentProduit.name}</h2>
-                                    <p className='text-start'>
-                                        {currentProduit.full_description.split("*").map((element3, index) => (
-                                            <span
-                                                key={index}
-                                                className={index % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}
-                                            >
-                                                {element3}
+                                {/* Description */}
+                                <div className='px-6 py-5'>
+                                    <p className='text-gray-600 leading-relaxed text-sm'>
+                                        {currentProduit.full_description.split("*").map((part, index) => (
+                                            <span key={index} className={index % 2 === 1 ? "text-red-600 font-semibold" : ""}>
+                                                {part}
                                             </span>
                                         ))}
                                     </p>
                                 </div>
 
-                                <div className='font-bold font-bricolage   w-full grid grid-cols-2 justify-center space-x-1 p-2 bg-white'>
-                                    <a href="tel:+22893452172" target='_blank' className='flex justify-center items-center bg-green-600 border-2 border-green-500 
-                                    px-10 py-2
-                                 
-                                    rounded-md h-auto'>
-                                        <div className='flex justify-center items-center space-x-2 text-white'>
-                                            <img src="/icons/white-phone.png" alt="" className='h-7 m-1' />
-                                            Appeler
-                                        </div>
+                                {/* Boutons */}
+                                <div className='grid grid-cols-2 gap-3 px-6 pb-6'>
+                                    <a
+                                        href="tel:+22893452172"
+                                        target='_blank'
+                                        className='flex justify-center items-center gap-2 bg-green-700 hover:bg-green-900 text-white rounded-xl py-3.5 font-semibold font-bricolage text-sm'
+                                    >
+                                        <img src="/icons/white-phone.png" alt="" className='h-4' />
+                                        Appeler
                                     </a>
-                                    <a href={'https://wa.me/22893452172' + `?text=Bonjour, j'ai besoin de ${currentProduit.name} pour mes soins. C'est disponible ?`} target='_blank' className=' bg-white border-2 border-green-500 rounded-md p-2'>
-                                        <div className='flex justify-center items-center space-x-2 text-green-600'>
-                                            <img src="/icons/whatsapp.png" alt="" className='h-9' />
-                                            Whatsapp
-                                        </div>
-
-
+                                    <a
+                                        href={`https://wa.me/22893452172?text=Bonjour, j'ai besoin de ${currentProduit.name} pour mes soins. C'est disponible ?`}
+                                        target='_blank'
+                                        className='flex justify-center items-center gap-2 bg-white hover:bg-green-50 border-2 border-green-600 text-green-700 rounded-xl py-3.5 font-semibold font-bricolage text-sm'
+                                    >
+                                        <img src="/icons/whatsapp.png" alt="" className='h-5' />
+                                        WhatsApp
                                     </a>
                                 </div>
-                            </>
-                        )}
-                    </div>
-                </motion.div>
 
+                            </div>
+                        </>
+                    )}
+                </motion.div>
             </div>
-            <div className='m-2'>
-                <div className='flex items-center justify-center mb-5'>
-                    <img src="/utils/feuille.png" alt="" className='h-10' />
-                    <p className=' uppercase text-lg text-green-600 font-medium '>Nos PRODUITS</p></div>
-                <div className='max grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-1'>
+            <div className='w-full flex flex-col items-center px-4'>
+                <div className='flex flex-col items-center justify-center mb-10 gap-2'>
+                    <div className='flex items-center gap-2'>
+                        <img src="/utils/feuille.png" alt="" className='h-8' />
+                        <p className='uppercase text-sm tracking-widest text-green-600 font-semibold'>Nos Produits</p>
+                        <img src="/utils/feuille.png" alt="" className='h-8 scale-x-[-1]' />
+                    </div>
+                    <h2 className='font-marcellus text-3xl text-center text-green-900'>Des remèdes naturels pour votre santé</h2>
+                    <div className='w-16 h-1 rounded-full bg-green-500 mt-1'></div>
+                </div>
+                <div className='max w-full mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-20 pt-14'>
                     {
                         produits.map((element) => (
                             <button onClick={() => {
                                 document.body.style.overflow = 'hidden';
-
                                 setPopupVisible(!isPopupVisible)
                                 setCurrentProduit(element)
-                            }} key={element.name} className='relative group
-                           flex flex-col items-center justify-center
-                            my-6
-                             bg-white hover:bg-green-50 border-2 border-green-500 rounded-2xl '>
-                                <motion.img src={"/produits/" + element.image} alt=""
-                                    variants={Animations.scale({ duration: 0.3 * produits.indexOf(element), })}
+                            }} key={element.name} className='relative group flex flex-col items-center rounded-2xl overflow-visible h-full'>
+
+                                {/* Image flottante */}
+                                <motion.img
+                                    src={"/produits/" + element.image}
+                                    alt=""
+                                    variants={Animations.scale({ duration: 0.3 * produits.indexOf(element) })}
                                     initial="hidden"
                                     whileInView="show"
-                                    className='absolute  -top-8  h-24 group-hover:scale-125' />
-                                <div className='w-full h-full  flex flex-col justify-between items-center p-2 mt-16 text-center'>
+                                    className='absolute -top-10 h-24 z-10 group-hover:scale-110 drop-shadow-lg'
+                                />
 
-                                    <div>
-                                        <p className='text-xl text-green-800  font-bricolage font-semibold '>{element.name}</p>
-                                        <p>{element.description.split("*").map((element2) => (<span key={element2} className={`${element.description.split("*").indexOf(element2) % 2 === 1 ? "text-red-600 font-semibold" : "text-black"}`}>{element2} </span>))}</p>
+                                {/* Corps de la carte */}
+                                <div className='w-full h-full flex flex-col items-center rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl border border-green-100 group-hover:border-green-300'>
+
+                                    {/* Bandeau vert haut */}
+                                    <div className='w-full bg-green-700 group-hover:bg-green-800 pt-14 pb-3 px-3 flex flex-col items-center gap-1'>
+                                        <p className='text-white font-bricolage font-bold text-sm leading-tight text-center'>{element.name}</p>
                                     </div>
-                                    <a className='text-white hover:text-white w-full py-3 bg-green-600 hover:bg-green-900 border border-white hover:ring ring-green-900 rounded-xl'>Voir</a>
-                                </div>
 
+                                    {/* Description + bouton */}
+                                    <div className='w-full bg-white flex-1 flex flex-col items-center justify-between gap-3 px-3 py-3'>
+                                        <p className='text-sm text-gray-500 text-center leading-snug'>
+                                            {element.description.split("*").map((element2, i) => (
+                                                <span key={i} className={i % 2 === 1 ? "text-red-500 font-semibold" : ""}>{element2}</span>
+                                            ))}
+                                        </p>
+                                        <span className='w-full py-2 text-xs font-semibold text-green-700 group-hover:text-green-900 border-2 border-green-600 group-hover:border-green-900 rounded-xl'>
+                                            Voir détails
+                                        </span>
+                                    </div>
+
+                                </div>
                             </button>
                         ))
                     }

@@ -86,58 +86,81 @@ const Services = () => {
         }
     ]
     return (
-        <section id="formations" className='my-10 flex flex-col items-center'>
-            <div className='my-6 text-center'>
-                <div className='flex items-center justify-center'>
-                    <img src="/utils/feuille.png" alt="" className='h-10' />
-                    <p className=' uppercase text-lg text-green-600 font-medium'>Nos SERVICES</p></div>
-                <p className='font-marcellus text-2xl'>Nous intervenons dans ces differents cas</p>
+        <section id="formations" className='py-16 flex flex-col items-center px-4'>
+
+            {/* En-tête */}
+            <div className='flex flex-col items-center gap-2 mb-12'>
+                <p className='uppercase tracking-widest text-green-600 font-semibold text-sm flex items-center gap-2'>
+                    <span className='w-6 h-px bg-green-400 inline-block'></span>
+                    Nos Services
+                    <span className='w-6 h-px bg-green-400 inline-block'></span>
+                </p>
+                <h2 className='font-marcellus text-3xl text-center text-green-900'>Nous intervenons dans ces différents cas</h2>
+                <div className='w-12 h-1 rounded-full bg-green-500 mt-1'></div>
             </div>
-            <div className=' max grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 md:gap-2'>
-                {
-                    services.map((element) => (
-                        <motion.a
-                            variants={Animations.bottomToTop({ duration: 0.3 * services.indexOf(element) + 0.2 })}
+
+            {/* Grille des services */}
+            <div className='max w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+                {services.map((element, index) => (
+                    <motion.div
+                        key={element.numero}
+                        variants={Animations.bottomToTop({ duration: 0.2 * index + 0.2 })}
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true }}
+                        className='relative bg-white border border-gray-100 hover:border-green-300 rounded-2xl p-6 shadow-sm hover:shadow-lg flex flex-col gap-3'
+                    >
+                        {/* Badge */}
+                        <div className='w-10 h-10 rounded-xl bg-green-700 group-hover:bg-green-800 flex items-center justify-center shrink-0'>
+                            <span className='text-white text-sm font-bold font-bricolage'>{element.numero}</span>
+                        </div>
+
+                        <h3 className='text-green-900 font-bold font-bricolage text-base leading-snug'>{element.titre}</h3>
+                        <p className='text-gray-500 text-sm leading-relaxed'>{element.description}</p>
+                    </motion.div>
+                ))}
+            </div>
+            <div className='w-full bg-green-50 mt-16 py-16 flex flex-col items-center px-4'>
+                <div className='max w-full flex flex-col items-center'>
+
+                    {/* En-tête */}
+                    <div className='flex flex-col items-center gap-3 mb-10'>
+                        <motion.img
+                            src="/icons/solution.png"
+                            alt=""
+                            variants={Animations.scale({ duration: 0.5 })}
                             initial="hidden"
                             whileInView="show"
-                            viewport={{ once: true }}
-                            key={element.numero} className='p-1'> <div
+                            className='h-14'
+                        />
+                        <p className='uppercase tracking-widest text-green-600 font-semibold text-sm flex items-center gap-2'>
+                            <span className='w-6 h-px bg-green-400 inline-block'></span>
+                            Maladies traitées
+                            <span className='w-6 h-px bg-green-400 inline-block'></span>
+                        </p>
+                        <h2 className='font-marcellus text-3xl text-center text-green-900'>
+                            Nous traitons totalement ces maladies
+                        </h2>
+                        <div className='w-12 h-1 rounded-full bg-green-500 mt-1'></div>
+                    </div>
 
-                                className=' h-full
-                                border hover:border-green-600 rounded-md
-                                space-y-4 p-2 md:p-6 
-                                transition-all duration-200'>
+                    {/* Tags */}
+                    <div className='flex flex-wrap justify-center gap-3'>
+                        {maladies.map((element, index) => (
+                            <motion.div
+                                key={element}
+                                variants={Animations.scale({ duration: 0.1 * index })}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={{ once: true }}
+                                className='group flex items-center gap-2.5 px-5 py-2.5 bg-white hover:bg-red-600 border border-red-200 hover:border-red-600 rounded-full shadow-sm hover:shadow-md cursor-default'
+                            >
+                                <div className='h-2 w-2 rounded-full bg-red-500 group-hover:bg-white shrink-0'></div>
+                                <p className='text-red-700 group-hover:text-white text-sm font-medium'>{element}</p>
+                            </motion.div>
+                        ))}
+                    </div>
 
-                                <h3 className='font-semibold font-bricolage text-green-600'>{element.numero}.</h3>
-
-                                <p className='text-xl text-blue-900 font-bold font-bricolage'>{element.titre}</p>
-                                <p className='text-zinc-600'>{element.description}</p>
-
-                            </div>
-                        </motion.a>
-                    ))
-                }
-            </div>
-            <div className='max my-12 flex flex-col items-center'>
-                <img src="/icons/solution.png" alt="" className='h-16' />
-                <p className='text-center text-2xl font-marcellus  
-                my-4'>Nous traitons totalement les maladies suivantes</p>
-                <div className='h-px w-28 bg-zinc-300 mb-4'></div>
-                <div className='  flex flex-wrap gap-1 p-1'>
-                    {maladies.map((element) => (
-                        <motion.div
-                            key={element}
-                            variants={Animations.scale({ duration: 0.1 * maladies.indexOf(element), })}
-                            initial="hidden"
-                            whileInView="show"
-                            className='
-                      flex
-                        px-4 py-2 space-x-2
-                        bg-red-100 border border-red-600 rounded-xl'>
-                            <img src="/icons/maladie.png" alt="" className='h-6' />
-                            <p>{element}</p>
-                        </motion.div>
-                    ))}
                 </div>
             </div>
 

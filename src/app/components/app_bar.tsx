@@ -74,13 +74,12 @@ const AppBar = () => {
                         </div>
 
 
-                        <ul className="max flex uppercase">
-                            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#"}>Accueil</a></li>
-                            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#formations"}>Services</a></li>
-                            <li className="hover:text-green-600 font-semibold  pl-9 py-3"><a href={inNotHome ? "/" : "#produits"}>Nos produits</a></li>
-
-                            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#a-propos"}>A Propos</a></li>
-                            <li className="hover:text-green-600 font-semibold border-l-[1px] border-white/30 pl-9 py-3"><a href={inNotHome ? "/" : "#contact"}>Contact</a></li>
+                        <ul className="max flex uppercase text-sm">
+                            <li className="pl-9 py-3"><a href={inNotHome ? "/" : "#"} className="font-semibold relative group text-gray-800 hover:text-green-700">Accueil<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full rounded-full"></span></a></li>
+                            <li className="pl-9 py-3"><a href={inNotHome ? "/" : "#formations"} className="font-semibold relative group text-gray-800 hover:text-green-700">Services<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full rounded-full"></span></a></li>
+                            <li className="pl-9 py-3"><a href={inNotHome ? "/" : "#produits"} className="font-semibold relative group text-gray-800 hover:text-green-700">Nos produits<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full rounded-full"></span></a></li>
+                            <li className="pl-9 py-3"><a href={inNotHome ? "/" : "#a-propos"} className="font-semibold relative group text-gray-800 hover:text-green-700">A Propos<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full rounded-full"></span></a></li>
+                            <li className="pl-9 py-3"><a href={inNotHome ? "/" : "#contact"} className="font-semibold text-white bg-green-600 hover:bg-green-800 px-5 py-2 rounded-full">Contact</a></li>
                         </ul>
                     </div>
                     <div className='flex w-full justify-between lg:hidden items-center'>

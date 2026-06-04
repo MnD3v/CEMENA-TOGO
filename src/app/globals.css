@@ -51,16 +51,16 @@ h3 {
 
 .trigger-button {
   padding: 10px 20px;
-  background-color: #0070f3;
+  background-color: #16a34a;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.25s ease;
 }
 
 .trigger-button:hover {
-  background-color: #005bb5;
+  background-color: #14532d;
 }
 
 /* Popup modal overlay */
@@ -71,10 +71,10 @@ h3 {
 /* Popup modal content */
 .modal {
   background: white;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 16px;
+  padding: 24px;
   position: relative;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
 }
 
 .close {
@@ -99,16 +99,16 @@ h3 {
 
 .actions .button {
   padding: 10px 20px;
-  background-color: #0070f3;
+  background-color: #16a34a;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.25s ease;
 }
 
 .actions .button:hover {
-  background-color: #005bb5;
+  background-color: #14532d;
 }
 
 
