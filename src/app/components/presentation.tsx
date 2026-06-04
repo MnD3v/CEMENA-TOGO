@@ -102,8 +102,8 @@ const Presentation = () => {
 
                         </div>
 
-                        {/* Colonne droite — images flush à droite du max */}
-                        <div className='w-full md:w-1/2 flex justify-end mt-10 md:mt-0'>
+                        {/* Colonne droite — images */}
+                        <div className='w-full md:w-1/2 flex justify-center md:justify-end mt-10 md:mt-0 md:pr-6'>
                             <div className='flex gap-2'>
                                 <div className='space-y-2 mt-10'>
                                     <motion.img
